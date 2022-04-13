@@ -1,0 +1,13 @@
+name: juan's approval workflow
+on: pull_request_review
+jobs: 
+  labelWhenApproved:
+    name: Label when approved
+    runs-on: ubuntu-latest
+    steps:
+    - name: Label when approved
+      uses: pullreminders/label-when-approved-action@master
+      env:
+        APPROVALS: "1"
+        GITHUB_TOKEN: "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"
+        ADD_LABEL: "approved"
